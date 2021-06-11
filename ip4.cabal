@@ -1,0 +1,38 @@
+name:                ip4
+
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             0.0.0.0
+synopsis:            IPv4 data-type with JSON, Textual, YAML & DHALL support
+description:         IPv4 data-type with JSON, Textual, YAML & DHALL support
+cabal-version:       >= 1.10
+license:             MIT
+license-file:        LICENSE
+author:              Martyn J. Pearce
+maintainer:          haskell@sixears.com
+build-type:          Simple
+library
+  ghc-options:        -O2 -W -Wall -fhelpful-errors
+  exposed-modules:    IP4
+  other-modules:
+  default-extensions: DeriveGeneric
+                    , NoImplicitPrelude
+                    , OverloadedStrings
+                    , PatternSynonyms
+                    , RecordWildCards
+                    , TemplateHaskell
+                    , UnicodeSyntax
+
+  build-depends:      aeson, base, base-unicode-symbols, data-default
+                    , data-textual, deepseq , dhall, either, network-ip, parsec
+                    , template-haskell, text, text-printer, yaml
+
+                    , more-unicode >= 0.0.15.0
+                    , parsec-plus  >= 1.1.0.1
+                    , quasiquoting >= 1.0.0.0
+
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+--------------------------------------------------------------------------------
